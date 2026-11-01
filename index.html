@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Monevator — Make More Money, Invest Profitably, Retire Early</title>
+  <meta name="description" content="Monevator is the UK's leading independent private investing and FIRE blog. Explore passive index investing guides, our UK cheapest online broker comparison table, interactive GBP calculators, and Mavens & Moguls membership." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=Source+Sans+3:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      /* Official Monevator.com Brand Palette (60-30-10 Rule) */
+      --bg-white: #FFFFFF;           /* 60% Primary Surface */
+      --bg-slate: #F8FAFC;           /* 30% Secondary Alabaster Surface */
+      --bg-subtle: #F1F5F9;
+      --ink-900: #0F172A;            /* Primary Deep Slate Ink */
+      --ink-700: #334155;            /* Body Copy Ink */
+      --ink-500: #64748B;            /* Muted Metadata Ink */
+      --border: #E2E8F0;
+      --border-strong: #CBD5E1;
+
+      /* 10% Official Monevator Brand Accents (from classic-r/css.css & logo) */
+      --brand-blue: #2361A1;         /* Official Monevator Link & CTA Blue */
+      --brand-blue-dark: #1D4BA1;    /* Official Monevator Hover Blue */
+      --brand-blue-soft: #E5EFF9;    /* Official Monevator Soft Blue Surface */
+      --brand-slate: #4E5D65;        /* Official Monevator Logo Slate-Teal */
+      --brand-teal: #66AABB;         /* Official Secondary Teal */
+      --brand-green: #15803D;        /* Portfolio Compounding Green */
+      --brand-green-soft: #F0FDF4;
+      --brand-amber: #B45309;
+      --brand-amber-soft: #FEF3C7;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --radius-xl: 20px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.05), 0 1px 2px rgba(15, 23, 42, 0.03);
+      --shadow-md: 0 10px 25px -5px rgba(15, 23, 42, 0.06), 0 4px 10px -2px rgba(15, 23, 42, 0.03);
+      --shadow-lg: 0 20px 35px -10px rgba(15, 23, 42, 0.09), 0 8px 16px -4px rgba(15, 23, 42, 0.04);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    body {
+      font-family: 'Source Sans 3', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--ink-700);
+      background-color: #E2E8F0;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4, .font-display {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+      color: var(--ink-900);
+      letter-spacing: -0.02em;
+      line-height: 1.22;
+    }
+
+    .tabular-nums {
+      font-family: 'JetBrains Mono', monospace;
+      font-variant-numeric: tabular-nums;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease, transform 0.18s ease;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE PREVIEW SWITCHER (Desktop / Tablet 820px / Mobile 390px)
+       ========================================================================== */
+    .preview-toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 9999;
+      background: #0F172A;
+      color: #F8FAFC;
+      padding: 10px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-size: 13px;
+    }
+
+    .preview-toolbar-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .preview-badge {
+      background: rgba(102, 170, 187, 0.2);
+      color: #7DD3FC;
+      border: 1px solid rgba(102, 170, 187, 0.4);
+      padding: 3px 10px;
+      border-radius: 999px;
+      font-weight: 700;
+      font-size: 11px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .preview-controls {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.07);
+      padding: 4px;
+      border-radius: 10px;
+    }
+
+    .device-btn {
+      background: transparent;
+      color: #CBD5E1;
+      border: none;
+      padding: 6px 12px;
+      border-radius: 7px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      white-space: nowrap;
+      transition: all 0.18s ease;
+    }
+
+    .device-btn:hover {
+      color: #FFFFFF;
+      background: rgba(255, 255, 255, 0.08);
+    }
+
+    .device-btn.active {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(35, 97, 161, 0.4);
+    }
+
+    @media (max-width: 760px) {
+      .preview-toolbar {
+        display: none;
+      }
+    }
+
+    /* ==========================================================================
+       VIEWPORT STAGE CONTAINER (@container stage)
+       ========================================================================== */
+    .viewport-stage {
+      width: 100%;
+      margin: 0 auto;
+      background: var(--bg-white);
+      container-type: inline-size;
+      container-name: stage;
+      transition: max-width 0.3s cubic-bezier(0.16, 1, 0.3, 1), margin 0.3s ease, box-shadow 0.3s ease, border-radius 0.3s ease;
+      min-height: 100vh;
+      overflow-x: clip;
+    }
+
+    .viewport-stage.mode-tablet {
+      max-width: 820px;
+      margin: 24px auto 48px;
+      border-radius: 20px;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.25);
+      border: 6px solid #1E293B;
+    }
+
+    .viewport-stage.mode-mobile {
+      max-width: 390px;
+      margin: 24px auto 48px;
+      border-radius: 32px;
+      box-shadow: 0 25px 60px rgba(15, 23, 42, 0.3);
+      border: 8px solid #1E293B;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1240px;
+      margin: 0 auto;
+      padding: 0 28px;
+    }
+
+    /* Prevent Grid Child Overflow on All Viewports */
+    .hero-grid > *,
+    .authority-grid > *,
+    .articles-grid > *,
+    .broker-bento > *,
+    .membership-grid > *,
+    .essential-grid > *,
+    .footer-grid > *,
+    .lead-story-card > *,
+    .authority-card > *,
+    .broker-row > * {
+      min-width: 0;
+    }
+
+    /* ==========================================================================
+       STICKY BRAND HEADER (Clean White 60% Surface, Zero Top Bar Clutter)
+       ========================================================================== */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 74px;
+      gap: 14px;
+    }
+
+    .brand-logo-link {
+      display: inline-flex;
+      align-items: center;
+      flex-shrink: 0;
+    }
+
+    .brand-logo-img {
+      height: 32px;
+      width: auto;
+      object-fit: contain;
+    }
+
+    .primary-nav {
+      display: flex;
+      align-items: center;
+      gap: 2px;
+    }
+
+    .nav-link {
+      padding: 7px 11px;
+      border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink-700);
+      white-space: nowrap;
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--brand-blue);
+      background: var(--brand-blue-soft);
+    }
+
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-shrink: 0;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 9px 15px;
+      border-radius: var(--radius-sm);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13.5px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      border: 1px solid transparent;
+      transition: all 0.18s ease;
+    }
+
+    .btn-primary {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+      box-shadow: 0 2px 6px rgba(35, 97, 161, 0.25);
+    }
+
+    .btn-primary:hover {
+      background: var(--brand-blue-dark);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: var(--bg-white);
+      color: var(--ink-900);
+      border-color: var(--border-strong);
+    }
+
+    .btn-outline:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+      background: var(--brand-blue-soft);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: var(--bg-slate);
+      border: 1px solid var(--border);
+      color: var(--ink-900);
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-sm);
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 18px;
+    }
+
+    .mobile-drawer {
+      display: none;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+      padding: 16px 24px 20px;
+    }
+
+    .mobile-drawer.open {
+      display: block;
+    }
+
+    .mobile-drawer-links {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .mobile-drawer-links a {
+      padding: 10px 12px;
+      background: var(--bg-slate);
+      border-radius: var(--radius-sm);
+      font-weight: 600;
+      font-size: 14px;
+      color: var(--ink-900);
+    }
+
+    /* ==========================================================================
+       HERO SECTION (Editorial Lead + Interactive GBP ISA/Broker Calculator)
+       ========================================================================== */
+    .hero-section {
+      background: linear-gradient(180deg, var(--bg-slate) 0%, var(--bg-white) 100%);
+      padding: 44px 0 36px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.12fr 0.88fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .eyebrow-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 6px 13px;
+      background: var(--brand-blue-soft);
+      color: var(--brand-blue);
+      border: 1px solid rgba(35, 97, 161, 0.22);
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+      max-width: 100%;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--brand-blue);
+      flex-shrink: 0;
+    }
+
+    .hero-title {
+      font-size: clamp(28px, 3.3vw, 42px);
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-bottom: 14px;
+      letter-spacing: -0.025em;
+    }
+
+    .hero-title span {
+      color: var(--brand-blue);
+    }
+
+    .hero-subtitle {
+      font-size: 17px;
+      color: var(--ink-700);
+      margin-bottom: 24px;
+      max-width: 620px;
+    }
+
+    /* Featured Lead Story Card Inside Hero */
+    .lead-story-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      display: grid;
+      grid-template-columns: 240px 1fr;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .lead-story-card:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--brand-blue);
+    }
+
+    .lead-story-img-wrap {
+      position: relative;
+      height: 100%;
+      min-height: 210px;
+      background: var(--bg-subtle);
+    }
+
+    .lead-story-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .lead-story-tag {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.88);
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+    }
+
+    .lead-story-body {
+      padding: 22px 24px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .lead-story-kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--brand-blue);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-bottom: 8px;
+    }
+
+    .lead-story-headline {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-bottom: 10px;
+      line-height: 1.3;
+    }
+
+    .lead-story-excerpt {
+      font-size: 14.5px;
+      color: var(--ink-700);
+      margin-bottom: 14px;
+      line-height: 1.5;
+    }
+
+    .lead-story-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      font-size: 13px;
+      color: var(--ink-500);
+      flex-wrap: wrap;
+    }
+
+    .read-link {
+      font-weight: 700;
+      color: var(--brand-blue);
+      white-space: nowrap;
+    }
+
+    /* Interactive GBP Calculator Card (Right Column of Hero) */
+    .calc-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .calc-card-header {
+      background: var(--ink-900);
+      color: #FFFFFF;
+      padding: 20px 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .calc-card-title {
+      color: #FFFFFF;
+      font-size: 16.5px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .calc-mode-tabs {
+      display: flex;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 3px;
+      border-radius: 8px;
+      gap: 4px;
+    }
+
+    .calc-tab-btn {
+      background: transparent;
+      color: #CBD5E1;
+      border: none;
+      padding: 5px 11px;
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.15s ease;
+    }
+
+    .calc-tab-btn.active {
+      background: var(--brand-blue);
+      color: #FFFFFF;
+    }
+
+    .calc-card-body {
+      padding: 24px;
+    }
+
+    .calc-result-banner {
+      background: var(--bg-slate);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 16px 18px;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .calc-result-label {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--ink-500);
+      margin-bottom: 4px;
+    }
+
+    .calc-result-value {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--ink-900);
+      line-height: 1.1;
+    }
+
+    .calc-result-pill {
+      background: var(--brand-green-soft);
+      color: var(--brand-green);
+      border: 1px solid rgba(21, 128, 61, 0.25);
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 12.5px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+
+    .slider-group {
+      margin-bottom: 16px;
+    }
+
+    .slider-label-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink-700);
+      margin-bottom: 6px;
+      gap: 8px;
+    }
+
+    .slider-val-badge {
+      color: var(--ink-900);
+      font-weight: 700;
+      background: var(--bg-subtle);
+      padding: 2px 8px;
+      border-radius: 6px;
+      font-size: 13px;
+      white-space: nowrap;
+    }
+
+    input[type="range"] {
+      width: 100%;
+      accent-color: var(--brand-blue);
+      height: 6px;
+      border-radius: 999px;
+      cursor: pointer;
+    }
+
+    .calc-mini-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 18px;
+      padding-top: 16px;
+      border-top: 1px solid var(--border);
+    }
+
+    .calc-mini-box {
+      background: var(--bg-slate);
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border);
+    }
+
+    .calc-mini-box-label {
+      font-size: 11.5px;
+      font-weight: 600;
+      color: var(--ink-500);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      margin-bottom: 2px;
+    }
+
+    .calc-mini-box-val {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--ink-900);
+    }
+
+    .calc-footer-links {
+      margin-top: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+
+    .calc-footer-links a {
+      color: var(--brand-blue);
+      font-weight: 700;
+    }
+
+    /* ==========================================================================
+       FULL-WIDTH 4-CARD AUTHORITY STRIP (Unified Dark Ink #0F172A)
+       ========================================================================== */
+    .authority-strip {
+      padding: 28px 0;
+      background: var(--bg-white);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .authority-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .authority-card {
+      background: var(--bg-slate);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .authority-icon {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: var(--brand-blue-soft);
+      color: var(--brand-blue);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 18px;
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    .authority-number {
+      font-size: 22px;
+      font-weight: 800;
+      color: var(--ink-900);
+      line-height: 1.15;
+      margin-bottom: 3px;
+      white-space: nowrap;
+    }
+
+    .authority-label {
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--ink-500);
+      line-height: 1.35;
+    }
+
+    /* ==========================================================================
+       SECTION HEADERS & FILTER PILLS
+       ========================================================================== */
+    .section {
+      padding: 64px 0;
+    }
+
+    .section-alt {
+      background: var(--bg-slate);
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-header {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 32px;
+      flex-wrap: wrap;
+    }
+
+    .section-kicker {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--brand-blue);
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-size: clamp(24px, 2.5vw, 32px);
+      font-weight: 800;
+      color: var(--ink-900);
+    }
+
+    .filter-pills {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .filter-pill {
+      background: var(--bg-white);
+      border: 1px solid var(--border-strong);
+      color: var(--ink-700);
+      padding: 7px 14px;
+      border-radius: 999px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.16s ease;
+    }
+
+    .filter-pill:hover {
+      border-color: var(--brand-blue);
+      color: var(--brand-blue);
+    }
+
+    .filter-pill.active {
+      background: var(--brand-blue);
+      border-color: var(--brand-blue);
+      color: #FFFFFF;
+    }
+
+    /* ==========================================================================
+       LATEST OCTOBER 2026 ARTICLES GRID
+       ========================================================================== */
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    .article-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .article-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--brand-blue);
+    }
+
+    .article-thumb-wrap {
+      position: relative;
+      aspect-ratio: 16 / 10;
+      background: #F8FAFC;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .article-thumb-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: left center;
+      transition: transform 0.35s ease;
+    }
+
+    .article-thumb-wrap img.fit-contain {
+      object-fit: contain;
+      object-position: center;
+      padding: 10px;
+      background: #FFFFFF;
+    }
+
+    .article-card:hover .article-thumb-wrap img {
+      transform: scale(1.03);
+    }
+
+    .article-cat-badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(15, 23, 42, 0.86);
+      color: #FFFFFF;
+      padding: 4px 10px;
+      border-radius: 6px;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .article-cat-badge.members {
+      background: var(--brand-blue);
+    }
+
+    .article-body {
+      padding: 20px 22px;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: space-between;
+    }
+
+    .article-title {
+      font-size: 18px;
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-bottom: 10px;
+      line-height: 1.34;
+    }
+
+    .article-card:hover .article-title {
+      color: var(--brand-blue);
+    }
+
+    .article-desc {
+      font-size: 14.5px;
+      color: var(--ink-700);
+      margin-bottom: 16px;
+      line-height: 1.52;
+    }
+
+    .article-meta {
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      font-size: 12.5px;
+      color: var(--ink-500);
+      font-weight: 600;
+    }
+
+    /* ==========================================================================
+       INTERACTIVE UK BROKER COMPARISON HUB (/compare-uk-cheapest-online-brokers/)
+       ========================================================================== */
+    .broker-bento {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 28px;
+      align-items: stretch;
+    }
+
+    .broker-table-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .broker-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .broker-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 15px 18px;
+      border-radius: var(--radius-md);
+      background: var(--bg-slate);
+      border: 1px solid var(--border);
+      transition: all 0.18s ease;
+    }
+
+    .broker-row:hover {
+      border-color: var(--brand-blue);
+      background: var(--brand-blue-soft);
+    }
+
+    .broker-name {
+      font-size: 15.5px;
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-bottom: 2px;
+    }
+
+    .broker-sub {
+      font-size: 13px;
+      color: var(--ink-500);
+    }
+
+    .broker-fee-tag {
+      background: var(--bg-white);
+      border: 1px solid var(--border-strong);
+      padding: 6px 12px;
+      border-radius: 8px;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--ink-900);
+      white-space: nowrap;
+      flex-shrink: 0;
+    }
+
+    /* Essential Reads & Slow & Steady Portfolio Card */
+    .essential-card {
+      background: var(--ink-900);
+      color: #FFFFFF;
+      border-radius: var(--radius-lg);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-md);
+    }
+
+    .essential-card h3 {
+      color: #FFFFFF;
+      font-size: 21px;
+      margin-bottom: 8px;
+    }
+
+    .essential-links-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .essential-link-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding: 12px 14px;
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #F8FAFC;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    .essential-link-item:hover {
+      background: rgba(35, 97, 161, 0.35);
+      border-color: #66AABB;
+    }
+
+    /* ==========================================================================
+       MAVENS & MOGULS MEMBERSHIP SHOWCASE (/membership/)
+       ========================================================================== */
+    .membership-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 28px;
+    }
+
+    .member-tier-card {
+      background: var(--bg-white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+
+    .member-tier-card.featured {
+      border: 2px solid var(--brand-blue);
+      box-shadow: var(--shadow-md);
+    }
+
+    .tier-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 12px;
+      border-radius: 999px;
+      font-size: 11.5px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      background: var(--brand-blue-soft);
+      color: var(--brand-blue);
+      margin-bottom: 14px;
+      width: fit-content;
+    }
+
+    .tier-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--ink-900);
+      margin-bottom: 8px;
+    }
+
+    .tier-desc {
+      font-size: 15px;
+      color: var(--ink-700);
+      margin-bottom: 20px;
+    }
+
+    .tier-perks {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 24px;
+      font-size: 14.5px;
+      color: var(--ink-700);
+    }
+
+    .tier-perks li {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .perk-check {
+      color: var(--brand-green);
+      font-weight: 800;
+      flex-shrink: 0;
+    }
+
+    /* ==========================================================================
+       SITE FOOTER
+       ========================================================================== */
+    .site-footer {
+      background: #0F172A;
+      color: #CBD5E1;
+      padding: 56px 0 36px;
+      font-size: 14px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr 1fr;
+      gap: 32px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .footer-logo {
+      height: 34px;
+      width: auto;
+      filter: brightness(0) invert(1);
+      margin-bottom: 14px;
+    }
+
+    .footer-heading {
+      color: #FFFFFF;
+      font-size: 14px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 14px;
+    }
+
+    .footer-links {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+    }
+
+    .footer-links a {
+      color: #94A3B8;
+    }
+
+    .footer-links a:hover {
+      color: #FFFFFF;
+    }
+
+    .footer-bottom {
+      padding-top: 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      color: #64748B;
+      font-size: 13px;
+      flex-wrap: wrap;
+    }
+
+    /* ==========================================================================
+       RESPONSIVE BREAKPOINTS: @media, @container stage, .mode-tablet, .mode-mobile
+       ========================================================================== */
+    @media (max-width: 1039px) {
+      .primary-nav { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .hero-grid,
+      .broker-bento,
+      .membership-grid { grid-template-columns: 1fr; }
+      .authority-grid,
+      .articles-grid,
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    @container stage (max-width: 1039px) {
+      .primary-nav { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .hero-grid,
+      .broker-bento,
+      .membership-grid { grid-template-columns: 1fr; }
+      .authority-grid,
+      .articles-grid,
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .viewport-stage.mode-tablet .primary-nav { display: none; }
+    .viewport-stage.mode-tablet .mobile-menu-btn { display: inline-flex; }
+    .viewport-stage.mode-tablet .hero-grid,
+    .viewport-stage.mode-tablet .broker-bento,
+    .viewport-stage.mode-tablet .membership-grid { grid-template-columns: 1fr; }
+    .viewport-stage.mode-tablet .authority-grid,
+    .viewport-stage.mode-tablet .articles-grid,
+    .viewport-stage.mode-tablet .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+    /* Mobile (<680px & .mode-mobile) — Placed Last So Mobile Always Wins */
+    @media (max-width: 679px) {
+      .container { padding: 0 16px; }
+      .header-inner { height: 60px; gap: 8px; }
+      .brand-logo-img { height: 26px; }
+      .header-actions .btn-outline,
+      .header-actions .btn-primary { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .hero-section { padding: 22px 0 26px; }
+      .eyebrow-badge { font-size: 10.5px; padding: 5px 10px; line-height: 1.3; white-space: normal; }
+      .hero-title { font-size: 25px; line-height: 1.22; }
+      .hero-subtitle { font-size: 14.5px; line-height: 1.5; margin-bottom: 18px; }
+      .lead-story-card,
+      .authority-grid,
+      .articles-grid,
+      .membership-grid,
+      .footer-grid { grid-template-columns: 1fr !important; }
+      .filter-pills { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 8px; }
+      .filter-pill { text-align: center; padding: 8px 10px; font-size: 12.5px; }
+      .lead-story-body, .calc-card-body, .article-body { padding: 16px; }
+      .calc-card-header { padding: 14px 16px; flex-direction: column; align-items: stretch; gap: 10px; }
+      .calc-mode-tabs { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+      .calc-tab-btn { text-align: center; }
+      .calc-result-banner { padding: 14px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      .calc-footer-links { flex-direction: column; align-items: flex-start; gap: 6px; }
+      .broker-table-card, .essential-card, .member-tier-card { padding: 18px 16px; }
+      .broker-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+    }
+
+    @container stage (max-width: 679px) {
+      .container { padding: 0 16px; }
+      .header-inner { height: 60px; gap: 8px; }
+      .brand-logo-img { height: 26px; }
+      .header-actions .btn-outline,
+      .header-actions .btn-primary { display: none; }
+      .mobile-menu-btn { display: inline-flex; }
+      .hero-section { padding: 22px 0 26px; }
+      .eyebrow-badge { font-size: 10.5px; padding: 5px 10px; line-height: 1.3; white-space: normal; }
+      .hero-title { font-size: 25px; line-height: 1.22; }
+      .hero-subtitle { font-size: 14.5px; line-height: 1.5; margin-bottom: 18px; }
+      .lead-story-card { grid-template-columns: 1fr !important; }
+      .lead-story-img-wrap { min-height: 175px; max-height: 195px; }
+      .lead-story-body { padding: 16px; }
+      .lead-story-headline { font-size: 17px; }
+      .lead-story-excerpt { font-size: 13.5px; }
+      .calc-card-header { padding: 14px 16px; flex-direction: column; align-items: stretch; gap: 10px; }
+      .calc-card-title { font-size: 15.5px; }
+      .calc-mode-tabs { width: 100%; display: grid; grid-template-columns: 1fr 1fr; }
+      .calc-tab-btn { text-align: center; padding: 6px 8px; }
+      .calc-card-body { padding: 16px; }
+      .calc-result-banner { padding: 14px; flex-direction: column; align-items: flex-start; gap: 8px; }
+      .calc-result-value { font-size: 24px; }
+      .calc-mini-stats { grid-template-columns: 1fr 1fr; gap: 8px; }
+      .calc-mini-box { padding: 10px 12px; }
+      .calc-mini-box-val { font-size: 14.5px; }
+      .calc-footer-links { flex-direction: column; align-items: flex-start; gap: 6px; font-size: 12.5px; }
+      .authority-strip { padding: 20px 0; }
+      .authority-grid { grid-template-columns: 1fr !important; gap: 10px; }
+      .authority-card { padding: 13px 15px; align-items: center; }
+      .authority-number { font-size: 19px; }
+      .authority-label { font-size: 12.5px; }
+      .section { padding: 36px 0; }
+      .section-header { margin-bottom: 20px; gap: 14px; }
+      .section-title { font-size: 21px; }
+      .filter-pills { display: grid; grid-template-columns: 1fr 1fr; width: 100%; gap: 8px; }
+      .filter-pill { text-align: center; padding: 8px 10px; font-size: 12.5px; }
+      .articles-grid { grid-template-columns: 1fr !important; gap: 16px; }
+      .article-body { padding: 16px; }
+      .article-title { font-size: 16.5px; }
+      .broker-table-card, .essential-card, .member-tier-card { padding: 18px 16px; }
+      .broker-row { flex-direction: column; align-items: flex-start; gap: 8px; }
+      .membership-grid { grid-template-columns: 1fr !important; gap: 16px; }
+      .mobile-drawer-links { grid-template-columns: 1fr; }
+      .footer-grid { grid-template-columns: 1fr !important; gap: 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Interactive Multi-Device Preview Switcher -->
+  <div class="preview-toolbar" role="region" aria-label="Responsive Layout Preview Toolbar">
+    <div class="preview-toolbar-left">
+      <span class="preview-badge">Monevator.com 2026 Concept</span>
+      <span>Official Brand Palette (<code>#2361A1</code> &amp; <code>#4E5D65</code>) • UK Broker Fee Finder • Mavens &amp; Moguls</span>
+    </div>
+    <div class="preview-controls">
+      <button type="button" class="device-btn active" onclick="setViewportMode('desktop', this)">
+        <span>🖥️ Desktop (100%)</span>
+      </button>
+      <button type="button" class="device-btn" onclick="setViewportMode('tablet', this)">
+        <span>📱 Tablet / iPad (820px)</span>
+      </button>
+      <button type="button" class="device-btn" onclick="setViewportMode('mobile', this)">
+        <span>📲 Mobile (390px)</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Responsive Stage Container -->
+  <div id="viewportStage" class="viewport-stage">
+
+    <!-- Clean White Sticky Brand Header -->
+    <header class="site-header">
+      <div class="container header-inner">
+        <a href="https://monevator.com/" class="brand-logo-link" aria-label="Monevator Home">
+          <img src="assets/logo.png" alt="Monevator — Motivation for armchair investors" class="brand-logo-img" />
+        </a>
+
+        <nav class="primary-nav" aria-label="Primary Navigation">
+          <a href="#latest-articles" class="nav-link active">Latest Articles</a>
+          <a href="https://monevator.com/category/investing/passive-investing-investing/" target="_blank" rel="noopener" class="nav-link">Passive Investing</a>
+          <a href="#brokers" class="nav-link">Compare UK Brokers</a>
+          <a href="#hero-calculator" class="nav-link">Calculators</a>
+          <a href="#membership" class="nav-link">Mavens &amp; Moguls</a>
+          <a href="https://shop.monevator.com/" target="_blank" rel="noopener" class="nav-link">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+          <a href="https://monevator.memberful.com/auth/sign_in" target="_blank" rel="noopener" class="btn btn-outline">Member Sign In</a>
+          <a href="https://monevator.com/membership/" target="_blank" rel="noopener" class="btn btn-primary">Become a Member</a>
+          <button type="button" class="mobile-menu-btn" aria-label="Toggle Menu" onclick="toggleMobileMenu()">☰</button>
+        </div>
+      </div>
+
+      <!-- Mobile & Tablet Collapsible Navigation Drawer -->
+      <div id="mobileDrawer" class="mobile-drawer">
+        <div class="mobile-drawer-links">
+          <a href="#latest-articles" onclick="toggleMobileMenu()">Latest Articles</a>
+          <a href="https://monevator.com/category/investing/passive-investing-investing/" target="_blank" rel="noopener">Passive Investing</a>
+          <a href="#brokers" onclick="toggleMobileMenu()">Compare UK Brokers</a>
+          <a href="https://monevator.com/personal-finance-tools-and-calculators/" target="_blank" rel="noopener">Tools &amp; Calculators</a>
+          <a href="#membership" onclick="toggleMobileMenu()">Mavens &amp; Moguls</a>
+          <a href="https://shop.monevator.com/" target="_blank" rel="noopener">Monevator Shop</a>
+          <a href="https://monevator.com/about/" target="_blank" rel="noopener">About Us</a>
+          <a href="https://monevator.com/contactus/" target="_blank" rel="noopener">Contact</a>
+        </div>
+        <div style="display:flex; gap:10px;">
+          <a href="https://monevator.memberful.com/auth/sign_in" target="_blank" rel="noopener" class="btn btn-outline" style="flex:1;">Sign In</a>
+          <a href="https://monevator.com/membership/" target="_blank" rel="noopener" class="btn btn-primary" style="flex:1;">Join Membership</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Hero Section: Editorial Lead + Interactive GBP ISA/SIPP & Broker Calculator -->
+    <section class="hero-section">
+      <div class="container hero-grid">
+        <!-- Left Column: Brand Value Proposition + Featured Cover Story -->
+        <div>
+          <div class="eyebrow-badge">
+            <span class="eyebrow-dot"></span>
+            <span>UK Private Investing, Index Trackers &amp; FIRE Since 2007</span>
+          </div>
+          <h1 class="hero-title">
+            Make More Money, <span>Invest Profitably,</span> and Retire Early.
+          </h1>
+          <p class="hero-subtitle">
+            Independent, no-nonsense commentary on passive index funds, ISAs, SIPPs, asset allocation, and financial independence from <strong>The Investor</strong>, <strong>The Accumulator</strong>, and friends.
+          </p>
+
+          <!-- Featured Cover Story (October 27, 2026) -->
+          <a href="https://monevator.com/ai-agents/" target="_blank" rel="noopener" class="lead-story-card">
+            <div class="lead-story-img-wrap">
+              <img src="assets/ex-banker.jpg" alt="Will AI agents like Muse mean the end of personal finance?" />
+              <span class="lead-story-tag">Featured Essay</span>
+            </div>
+            <div class="lead-story-body">
+              <div>
+                <div class="lead-story-kicker">Investing &amp; Technology • 27 Oct 2026</div>
+                <h2 class="lead-story-headline">Will AI agents like Muse mean the end of personal finance?</h2>
+                <p class="lead-story-excerpt">
+                  Why autonomous financial agents could disrupt high-fee wealth managers, cash savings inertia, and how private investors manage their portfolios.
+                </p>
+              </div>
+              <div class="lead-story-meta">
+                <span>By <strong>The Investor</strong></span>
+                <span class="read-link">Read Full Essay →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <!-- Right Column: Interactive Monevator GBP Compounding & Broker Fee Finder -->
+        <div class="calc-card" id="hero-calculator">
+          <div class="calc-card-header">
+            <div class="calc-card-title">
+              <span>🇬🇧</span>
+              <span>Monevator Interactive UK Wealth Toolkit</span>
+            </div>
+            <div class="calc-mode-tabs" role="tablist">
+              <button type="button" class="calc-tab-btn active" id="tabBtnCompound" onclick="switchCalcMode('compound')">ISA / SIPP Compounder</button>
+              <button type="button" class="calc-tab-btn" id="tabBtnBroker" onclick="switchCalcMode('broker')">UK Broker Fee Finder</button>
+            </div>
+          </div>
+
+          <!-- Mode 1: GBP Compound Interest & Millionaire Calculator -->
+          <div class="calc-card-body" id="calcPaneCompound">
+            <div class="calc-result-banner">
+              <div>
+                <div class="calc-result-label">Projected ISA / SIPP Portfolio</div>
+                <div class="calc-result-value tabular-nums" id="gbpTotalOutput">£549,142</div>
+              </div>
+              <span class="calc-result-pill tabular-nums" id="gbpGrowthBadge">+£334,142 Tax-Free Growth</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <label for="gbpInitial">Starting ISA / SIPP Pot</label>
+                <span class="slider-val-badge tabular-nums" id="gbpInitialLabel">£35,000</span>
+              </div>
+              <input type="range" id="gbpInitial" min="0" max="250000" step="2500" value="35000" oninput="updateCompoundCalc()" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <label for="gbpMonthly">Monthly Index Tracker Contribution</label>
+                <span class="slider-val-badge tabular-nums" id="gbpMonthlyLabel">£750 / mo</span>
+              </div>
+              <input type="range" id="gbpMonthly" min="100" max="4000" step="50" value="750" oninput="updateCompoundCalc()" />
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <label for="gbpYears">Time Horizon (at 7% Real Return)</label>
+                <span class="slider-val-badge tabular-nums" id="gbpYearsLabel">20 Years</span>
+              </div>
+              <input type="range" id="gbpYears" min="5" max="40" step="1" value="20" oninput="updateCompoundCalc()" />
+            </div>
+
+            <div class="calc-mini-stats">
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">Total Contributions</div>
+                <div class="calc-mini-box-val tabular-nums" id="gbpPrincipalOut">£215,000</div>
+              </div>
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">4% SWR Annual Income</div>
+                <div class="calc-mini-box-val tabular-nums" id="gbpSwrOut">£21,966 / yr</div>
+              </div>
+            </div>
+
+            <div class="calc-footer-links">
+              <span style="color:var(--ink-500);">Monevator Compound Interest Tool</span>
+              <a href="https://monevator.com/compound-interest-calculator/" target="_blank" rel="noopener">Open Full Calculator →</a>
+            </div>
+          </div>
+
+          <!-- Mode 2: Interactive UK Broker Custody Fee Finder -->
+          <div class="calc-card-body" id="calcPaneBroker" style="display:none;">
+            <div class="calc-result-banner">
+              <div>
+                <div class="calc-result-label">Best Broker Structure for Your Pot</div>
+                <div class="calc-result-value" id="brokerWinnerOutput" style="font-size:21px;">Flat-Fee UK Broker Wins</div>
+              </div>
+              <span class="calc-result-pill tabular-nums" id="brokerSavingBadge">Save £255 / yr in Fees</span>
+            </div>
+
+            <div class="slider-group">
+              <div class="slider-label-row">
+                <label for="potSize">Total UK ISA / SIPP Portfolio Size</label>
+                <span class="slider-val-badge tabular-nums" id="potSizeLabel">£120,000</span>
+              </div>
+              <input type="range" id="potSize" min="10000" max="500000" step="5000" value="120000" oninput="updateBrokerCalc()" />
+            </div>
+
+            <div class="calc-mini-stats">
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">0.15% Tiered Broker (Vanguard)</div>
+                <div class="calc-mini-box-val tabular-nums" id="feePctOut">£180 / yr</div>
+              </div>
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">Flat-Fee Broker (ii / Lloyds)</div>
+                <div class="calc-mini-box-val tabular-nums" id="feeFlatOut">£120 / yr</div>
+              </div>
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">0.00% ETF Platform (InvestEngine)</div>
+                <div class="calc-mini-box-val tabular-nums" id="feeZeroOut">£0 / yr (DIY)</div>
+              </div>
+              <div class="calc-mini-box">
+                <div class="calc-mini-box-label">0.45% Legacy Platform (HL Funds)</div>
+                <div class="calc-mini-box-val tabular-nums" id="feeHighOut">£540 / yr</div>
+              </div>
+            </div>
+
+            <div class="calc-footer-links">
+              <span style="color:var(--ink-500);">Updated from Monevator Broker Table</span>
+              <a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener">View Full UK Broker Table →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Full-Width 4-Card Authority Strip (Unified Dark Ink #0F172A) -->
+    <section class="authority-strip" aria-label="Monevator Authority Metrics">
+      <div class="container authority-grid">
+        <div class="authority-card">
+          <div class="authority-icon">🇬🇧</div>
+          <div>
+            <div class="authority-number tabular-nums">Est. 2007</div>
+            <div class="authority-label">19+ Years as the UK's Leading Private Investing Blog</div>
+          </div>
+        </div>
+        <div class="authority-card">
+          <div class="authority-icon">📚</div>
+          <div>
+            <div class="authority-number tabular-nums">2,400+</div>
+            <div class="authority-label">In-Depth Articles on Passive Funds, ISAs, SIPPs &amp; FIRE</div>
+          </div>
+        </div>
+        <div class="authority-card">
+          <div class="authority-icon">📊</div>
+          <div>
+            <div class="authority-number tabular-nums">30+ Brokers</div>
+            <div class="authority-label">Compared Line-by-Line in the UK Cheapest Broker Guide</div>
+          </div>
+        </div>
+        <div class="authority-card">
+          <div class="authority-icon">📈</div>
+          <div>
+            <div class="authority-number tabular-nums">Since 2011</div>
+            <div class="authority-label">Live Slow &amp; Steady Model Passive Portfolio Tracking</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest October 2026 Monevator Articles Grid -->
+    <section class="section" id="latest-articles">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Fresh Analysis &amp; Weekend Reading • October 2026</div>
+            <h2 class="section-title">Latest Articles from The Investor &amp; The Accumulator</h2>
+          </div>
+          <div class="filter-pills" role="tablist" aria-label="Filter Articles by Topic">
+            <button type="button" class="filter-pill active" onclick="filterArticles('all', this)">All Posts (6)</button>
+            <button type="button" class="filter-pill" onclick="filterArticles('weekend', this)">Weekend Reading</button>
+            <button type="button" class="filter-pill" onclick="filterArticles('investing', this)">Passive &amp; Returns</button>
+            <button type="button" class="filter-pill" onclick="filterArticles('members', this)">Members &amp; Strategy</button>
+          </div>
+        </div>
+
+        <div class="articles-grid" id="articlesGrid">
+          <!-- Article 1 (31 Oct 2026) -->
+          <a href="https://monevator.com/weekend-reading-budget-boom-and-bust/" target="_blank" rel="noopener" class="article-card" data-category="weekend">
+            <div class="article-thumb-wrap">
+              <img src="assets/us-rates.jpg" class="fit-contain" alt="Weekend reading: Budget, boom, and bust" loading="lazy" />
+              <span class="article-cat-badge">Weekend Reading</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">Weekend reading: Budget, boom, and bust</h3>
+                <p class="article-desc">Our curated roundup of the week's sharpest UK Autumn Budget reactions, gilt yield shifts, and global equity market links.</p>
+              </div>
+              <div class="article-meta">
+                <span>The Investor • 31 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 2 (29 Oct 2026 - Members) -->
+          <a href="https://monevator.com/you-should-lend-your-shares-to-evil-short-sellers-members/" target="_blank" rel="noopener" class="article-card" data-category="members">
+            <div class="article-thumb-wrap">
+              <img src="assets/moguls.jpg" class="fit-contain" alt="You should lend your shares to evil short sellers [Members]" loading="lazy" />
+              <span class="article-cat-badge members">Mavens &amp; Moguls</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">You should lend your shares to evil short sellers [Members]</h3>
+                <p class="article-desc">Finumus explains why securities lending inside ETFs and brokerage accounts quietly boosts your net returns—and why short sellers keep markets honest.</p>
+              </div>
+              <div class="article-meta">
+                <span>Finumus • 29 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 3 (24 Oct 2026) -->
+          <a href="https://monevator.com/age-and-spending/" target="_blank" rel="noopener" class="article-card" data-category="weekend">
+            <div class="article-thumb-wrap">
+              <img src="assets/weekend-reading.jpg" alt="Weekend reading: When I'm telling myself I'm not really 64" loading="lazy" />
+              <span class="article-cat-badge">Deaccumulation</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">Weekend reading: When I'm telling myself I'm not really 64</h3>
+                <p class="article-desc">How retirement spending curves evolve across your 60s, 70s, and 80s—plus the week's best UK personal finance reads.</p>
+              </div>
+              <div class="article-meta">
+                <span>The Investor • 24 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 4 (22 Oct 2026) -->
+          <a href="https://monevator.com/why-you-cant-avoid-risk-when-investing/" target="_blank" rel="noopener" class="article-card" data-category="investing">
+            <div class="article-thumb-wrap">
+              <img src="assets/risk-main.jpg" style="object-position: right center;" alt="Why you can't avoid risk when investing" loading="lazy" />
+              <span class="article-cat-badge">Risk &amp; Allocation</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">Why you can't avoid risk when investing</h3>
+                <p class="article-desc">Holding cash feels safe in nominal terms, but inflation, longevity risk, and shortfall risk never sleep. Here is how to balance them.</p>
+              </div>
+              <div class="article-meta">
+                <span>Frugalist • 22 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 5 (20 Oct 2026 - The Accumulator) -->
+          <a href="https://monevator.com/gold-gbp-historical-asset-class-returns/" target="_blank" rel="noopener" class="article-card" data-category="investing">
+            <div class="article-thumb-wrap">
+              <img src="assets/gold-chart.png" style="object-position: top center;" alt="Gold GBP: historical asset class returns" loading="lazy" />
+              <span class="article-cat-badge">Passive Investing</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">Gold GBP: historical asset class returns</h3>
+                <p class="article-desc">The Accumulator examines how Gold priced in Sterling has performed during UK inflation spikes, equity drawdowns, and gilt sell-offs.</p>
+              </div>
+              <div class="article-meta">
+                <span>The Accumulator • 20 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+
+          <!-- Article 6 (15 Oct 2026 - The Engineer) -->
+          <a href="https://monevator.com/surviving-economic-meltdown/" target="_blank" rel="noopener" class="article-card" data-category="members">
+            <div class="article-thumb-wrap">
+              <img src="assets/meltdown-main.jpg" style="object-position: right center;" alt="Surviving economic meltdown" loading="lazy" />
+              <span class="article-cat-badge">Resilience</span>
+            </div>
+            <div class="article-body">
+              <div>
+                <h3 class="article-title">Surviving economic meltdown</h3>
+                <p class="article-desc">Practical portfolio diversification and household resilience strategies for tail-risk scenarios and severe market dislocations.</p>
+              </div>
+              <div class="article-meta">
+                <span>The Engineer • 15 Oct 2026</span>
+                <span class="read-link">Read →</span>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- UK Cheapest Online Broker Comparison & Essential Reads Hub -->
+    <section class="section section-alt" id="brokers">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Flagship UK Comparison Guide</div>
+            <h2 class="section-title">Compare the UK's Cheapest Online Brokers &amp; Essential Reads</h2>
+          </div>
+          <a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener" class="btn btn-primary">Open Complete UK Broker Table →</a>
+        </div>
+
+        <div class="broker-bento">
+          <!-- Left: Streamlined UK Broker Comparison Snapshot -->
+          <div class="broker-table-card">
+            <h3 style="font-size:20px; font-weight:800; margin-bottom:6px;">UK ISA &amp; SIPP Platform Fee Snapshot</h3>
+            <p style="font-size:14.5px; color:var(--ink-500);">Stop overpaying basis points. Compare flat-fee, percentage-fee, and zero-commission ETF platforms across portfolio tiers.</p>
+
+            <div class="broker-list">
+              <a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener" class="broker-row">
+                <div>
+                  <div class="broker-name">Zero-Fee ETF Platforms (InvestEngine / Trading 212)</div>
+                  <div class="broker-sub">Best for DIY ETF ISA investors looking to eliminate platform custody drag</div>
+                </div>
+                <span class="broker-fee-tag tabular-nums" style="color:var(--brand-green); border-color:rgba(21,128,61,0.3); background:var(--brand-green-soft);">0.00% Custody</span>
+              </a>
+
+              <a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener" class="broker-row">
+                <div>
+                  <div class="broker-name">Low Percentage Tiered Platforms (Vanguard UK / Dodl)</div>
+                  <div class="broker-sub">Ideal for smaller and growing ISA / SIPP pots under £50,000–£80,000</div>
+                </div>
+                <span class="broker-fee-tag tabular-nums">0.15% (Cap £375)</span>
+              </a>
+
+              <a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener" class="broker-row">
+                <div>
+                  <div class="broker-name">Flat-Fee Platforms (Interactive Investor / Lloyds / iWeb)</div>
+                  <div class="broker-sub">The Accumulator's sweet spot for six-figure OEIC &amp; index fund portfolios</div>
+                </div>
+                <span class="broker-fee-tag tabular-nums">Fixed £ / yr</span>
+              </a>
+
+              <a href="https://monevator.com/personal-finance-tools-and-calculators/" target="_blank" rel="noopener" class="broker-row">
+                <div>
+                  <div class="broker-name">Monevator Calculators (Compound, Millionaire &amp; Mortgage)</div>
+                  <div class="broker-sub">Model your exact savings rate, mortgage overpayments, and fee savings</div>
+                </div>
+                <span class="broker-fee-tag">3 Free Tools →</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Right: Essential Reads Curated Sidebar Replacement -->
+          <div class="essential-card">
+            <div>
+              <div class="eyebrow-badge" style="background:rgba(102,170,187,0.2); color:#7DD3FC; border-color:rgba(102,170,187,0.35);">
+                <span>Start Here • Timeless Classics</span>
+              </div>
+              <h3>Monevator Essential Reads</h3>
+              <p style="color:#CBD5E1; font-size:14.5px;">
+                New to Monevator? Start with our foundational guides to passive index investing, bear markets, and UK retirement planning.
+              </p>
+
+              <div class="essential-links-list">
+                <a href="https://monevator.com/index-investing/" target="_blank" rel="noopener" class="essential-link-item">
+                  <span>Five reasons why you'll love index investing</span>
+                  <span>→</span>
+                </a>
+                <a href="https://monevator.com/bear-markets/" target="_blank" rel="noopener" class="essential-link-item">
+                  <span>Bear markets: how long they last &amp; how to invest</span>
+                  <span>→</span>
+                </a>
+                <a href="https://monevator.com/habits-of-successful-private-investors/" target="_blank" rel="noopener" class="essential-link-item">
+                  <span>The seven habits of highly successful private investors</span>
+                  <span>→</span>
+                </a>
+                <a href="https://monevator.com/how-to-retirement-plan/" target="_blank" rel="noopener" class="essential-link-item">
+                  <span>How to create a simple retirement plan</span>
+                  <span>→</span>
+                </a>
+                <a href="https://monevator.com/buy-to-let-the-landlord-trap-tightens/" target="_blank" rel="noopener" class="essential-link-item">
+                  <span>Buy-to-Let: the landlord trap tightens</span>
+                  <span>→</span>
+                </a>
+              </div>
+            </div>
+
+            <a href="https://monevator.com/category/investing/passive-investing-investing/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">
+              Explore All Passive Investing Guides →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Mavens & Moguls Membership Section (/membership/) -->
+    <section class="section" id="membership">
+      <div class="container">
+        <div class="section-header">
+          <div>
+            <div class="section-kicker">Reader-Supported Independent Journalism</div>
+            <h2 class="section-title">Get More from Monevator with Membership</h2>
+          </div>
+          <a href="https://monevator.memberful.com/auth/sign_in" target="_blank" rel="noopener" class="btn btn-outline">Existing Member Sign In →</a>
+        </div>
+
+        <div class="membership-grid">
+          <!-- Tier 1: Mavens -->
+          <div class="member-tier-card featured">
+            <div>
+              <span class="tier-badge">Most Popular • Passive Investors</span>
+              <h3 class="tier-title">Monevator Mavens</h3>
+              <p class="tier-desc">
+                The entry-level way to support Monevator's independent voice while unlocking exclusive passive investing deep-dives and ad-free reading.
+              </p>
+              <ul class="tier-perks">
+                <li><span class="perk-check">✓</span> <span>Exclusive monthly member articles from <strong>The Accumulator</strong> &amp; contributors</span></li>
+                <li><span class="perk-check">✓</span> <span>Clean, distraction-free, <strong>ad-free browsing experience</strong> across Monevator</span></li>
+                <li><span class="perk-check">✓</span> <span>Full commenting privileges and community discussion access</span></li>
+                <li><span class="perk-check">✓</span> <span>Supports our free curated <em>Weekend Reading</em> links and broker tables</span></li>
+              </ul>
+            </div>
+            <a href="https://monevator.com/membership/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;">
+              Become a Maven Member →
+            </a>
+          </div>
+
+          <!-- Tier 2: Moguls -->
+          <div class="member-tier-card">
+            <div>
+              <span class="tier-badge" style="background:var(--bg-subtle); color:var(--ink-900);">Active Investors &amp; Superfans</span>
+              <h3 class="tier-title">Monevator Moguls</h3>
+              <p class="tier-desc">
+                For stock-pickers, active market enthusiasts, and superfans who relish the challenge of active investing commentary alongside everything in Mavens.
+              </p>
+              <ul class="tier-perks">
+                <li><span class="perk-check">✓</span> <span>Includes <strong>all Maven benefits</strong> (ad-free site, member essays, full comments)</span></li>
+                <li><span class="perk-check">✓</span> <span>Bonus active investing, valuation, and market timing commentary from <strong>The Investor</strong></span></li>
+                <li><span class="perk-check">✓</span> <span>Deep-dive Finumus &amp; special situation financial mechanics articles</span></li>
+                <li><span class="perk-check">✓</span> <span>Directly champions independent UK financial writing</span></li>
+              </ul>
+            </div>
+            <a href="https://monevator.com/membership/" target="_blank" rel="noopener" class="btn btn-outline" style="width:100%;">
+              Step Up to Mogul Membership →
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Official Site Footer -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div>
+            <img src="assets/logo.png" alt="Monevator" class="footer-logo" />
+            <p style="color:#94A3B8; margin-bottom:16px; max-width:340px;">
+              Monevator is a personal blog about money: making, saving, growing, and sometimes even spending it. Written by The Investor, The Accumulator, and friends since 2007.
+            </p>
+            <div style="font-size:13px; color:#64748B;">
+              Information only — never specific financial advice. Do your own research.
+            </div>
+          </div>
+
+          <div>
+            <div class="footer-heading">Core Categories</div>
+            <ul class="footer-links">
+              <li><a href="https://monevator.com/category/earning/" target="_blank" rel="noopener">Earning</a></li>
+              <li><a href="https://monevator.com/category/investing/" target="_blank" rel="noopener">Investing</a></li>
+              <li><a href="https://monevator.com/category/investing/passive-investing-investing/" target="_blank" rel="noopener">Passive Investing</a></li>
+              <li><a href="https://monevator.com/category/deaccumulation/" target="_blank" rel="noopener">Deaccumulation &amp; FIRE</a></li>
+              <li><a href="https://monevator.com/category/property/" target="_blank" rel="noopener">UK Property</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">Tools &amp; Membership</div>
+            <ul class="footer-links">
+              <li><a href="https://monevator.com/compare-uk-cheapest-online-brokers/" target="_blank" rel="noopener">Compare UK Brokers</a></li>
+              <li><a href="https://monevator.com/compound-interest-calculator/" target="_blank" rel="noopener">Compound Interest Calculator</a></li>
+              <li><a href="https://monevator.com/millionaire-calculator/" target="_blank" rel="noopener">The Millionaire Calculator</a></li>
+              <li><a href="https://monevator.com/Mortgage-repayment-calculator/" target="_blank" rel="noopener">Mortgage Repayments Calculator</a></li>
+              <li><a href="https://monevator.com/membership/" target="_blank" rel="noopener">Mavens &amp; Moguls Membership</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <div class="footer-heading">About &amp; Legal</div>
+            <ul class="footer-links">
+              <li><a href="https://monevator.com/about/" target="_blank" rel="noopener">About Monevator</a></li>
+              <li><a href="https://monevator.com/contactus/" target="_blank" rel="noopener">Contact Us</a></li>
+              <li><a href="https://shop.monevator.com/" target="_blank" rel="noopener">Monevator Merch Shop</a></li>
+              <li><a href="https://monevator.com/disclaimer/" target="_blank" rel="noopener">Full Disclaimer</a></li>
+              <li><a href="https://monevator.com/privacy/" target="_blank" rel="noopener">Privacy Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <span>© 2007–2026 Monevator. All Rights Reserved.</span>
+          <span>Redesigned for High-Readability Desktop, Tablet &amp; Mobile Performance</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- /#viewportStage -->
+
+  <script>
+    // 1. Multi-Device Preview Switcher (Desktop / Tablet 820px / Mobile 390px)
+    function setViewportMode(mode, btn) {
+      const stage = document.getElementById('viewportStage');
+      stage.classList.remove('mode-tablet', 'mode-mobile');
+      if (mode === 'tablet') stage.classList.add('mode-tablet');
+      if (mode === 'mobile') stage.classList.add('mode-mobile');
+
+      document.querySelectorAll('.device-btn').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+    }
+
+    function toggleMobileMenu() {
+      const drawer = document.getElementById('mobileDrawer');
+      drawer.classList.toggle('open');
+    }
+
+    // 2. Interactive Calculator Mode Switcher (ISA Compounder vs. UK Broker Fee Finder)
+    function switchCalcMode(mode) {
+      const paneComp = document.getElementById('calcPaneCompound');
+      const paneBrok = document.getElementById('calcPaneBroker');
+      const btnComp = document.getElementById('tabBtnCompound');
+      const btnBrok = document.getElementById('tabBtnBroker');
+
+      if (mode === 'compound') {
+        paneComp.style.display = 'block';
+        paneBrok.style.display = 'none';
+        btnComp.classList.add('active');
+        btnBrok.classList.remove('active');
+      } else {
+        paneComp.style.display = 'none';
+        paneBrok.style.display = 'block';
+        btnComp.classList.remove('active');
+        btnBrok.classList.add('active');
+      }
+    }
+
+    // 3. GBP Compound Interest & SWR Calculator Logic
+    function updateCompoundCalc() {
+      const initial = Number(document.getElementById('gbpInitial').value);
+      const monthly = Number(document.getElementById('gbpMonthly').value);
+      const years = Number(document.getElementById('gbpYears').value);
+      const annualRate = 0.07;
+      const monthlyRate = annualRate / 12;
+      const months = years * 12;
+
+      const futureInitial = initial * Math.pow(1 + monthlyRate, months);
+      const futureContrib = monthly * ((Math.pow(1 + monthlyRate, months) - 1) / monthlyRate);
+      const total = Math.round(futureInitial + futureContrib);
+      const totalPrincipal = initial + (monthly * months);
+      const totalGrowth = Math.max(0, total - totalPrincipal);
+      const swr = Math.round(total * 0.04);
+
+      document.getElementById('gbpInitialLabel').textContent = '£' + initial.toLocaleString();
+      document.getElementById('gbpMonthlyLabel').textContent = '£' + monthly.toLocaleString() + ' / mo';
+      document.getElementById('gbpYearsLabel').textContent = years + ' Years';
+      document.getElementById('gbpTotalOutput').textContent = '£' + total.toLocaleString();
+      document.getElementById('gbpGrowthBadge').textContent = '+£' + totalGrowth.toLocaleString() + ' Tax-Free Growth';
+      document.getElementById('gbpPrincipalOut').textContent = '£' + totalPrincipal.toLocaleString();
+      document.getElementById('gbpSwrOut').textContent = '£' + swr.toLocaleString() + ' / yr';
+    }
+
+    // 4. UK Broker Custody Fee Comparison Logic
+    function updateBrokerCalc() {
+      const pot = Number(document.getElementById('potSize').value);
+      document.getElementById('potSizeLabel').textContent = '£' + pot.toLocaleString();
+
+      const feeVanguard = Math.min(375, Math.max(48, Math.round(pot * 0.0015)));
+      const feeFlat = pot <= 50000 ? 59 : 120;
+      const feeHigh = Math.round(pot * 0.0045);
+      const savedVsHigh = Math.max(0, feeHigh - Math.min(feeVanguard, feeFlat));
+
+      document.getElementById('feePctOut').textContent = '£' + feeVanguard.toLocaleString() + ' / yr';
+      document.getElementById('feeFlatOut').textContent = '£' + feeFlat.toLocaleString() + ' / yr';
+      document.getElementById('feeZeroOut').textContent = '£0 / yr (ETF)';
+      document.getElementById('feeHighOut').textContent = '£' + feeHigh.toLocaleString() + ' / yr';
+      document.getElementById('brokerSavingBadge').textContent = 'Save £' + savedVsHigh.toLocaleString() + ' / yr vs 0.45%';
+
+      if (pot >= 80000) {
+        document.getElementById('brokerWinnerOutput').textContent = 'Flat-Fee or 0% ETF Wins';
+      } else {
+        document.getElementById('brokerWinnerOutput').textContent = '0.15% Tiered or 0% ETF Wins';
+      }
+    }
+
+    // 5. Category Article Filter Logic
+    function filterArticles(cat, btn) {
+      document.querySelectorAll('.filter-pill').forEach(b => b.classList.remove('active'));
+      if (btn) btn.classList.add('active');
+      document.querySelectorAll('#articlesGrid .article-card').forEach(card => {
+        if (cat === 'all' || card.getAttribute('data-category') === cat) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+
+    // Initialize calculators & optional ?device=mobile|tablet preview param
+    updateCompoundCalc();
+    updateBrokerCalc();
+    (function initDeviceParam() {
+      const p = new URLSearchParams(window.location.search).get('device');
+      if (p === 'mobile' || p === 'tablet') {
+        const btns = document.querySelectorAll('.device-btn');
+        setViewportMode(p, p === 'tablet' ? btns[1] : btns[2]);
+      }
+    })();
+
+    // 6. Silent Real-Time Client Visit Tracker (ntfy.sh/mjay143_outreach_tracker_2026)
+    (async function initOutreachTracker() {
+      try {
+        const params = new URLSearchParams(window.location.search);
+        if (params.get('preview') === 'owner') {
+          localStorage.setItem('mjay_owner_ignore', '1');
+        }
+        const isLocal = ['localhost', '127.0.0.1', ''].includes(window.location.hostname);
+        if (isLocal || localStorage.getItem('mjay_owner_ignore') === '1') {
+          console.log('[OutreachTracker] Owner/Local preview detected — suppressing alert.');
+          return;
+        }
+        if (sessionStorage.getItem('mjay_pinged_monevator')) return;
+        sessionStorage.setItem('mjay_pinged_monevator', '1');
+
+        const geoRes = await fetch('https://ipwho.is/').catch(() => null);
+        const geo = geoRes ? await geoRes.json() : {};
+        const countryCode = geo.country_code || 'GB';
+        const isClient = countryCode !== 'PH';
+        const isMobile = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent);
+
+        const payload = {
+          project: 'Monevator.com',
+          owner: 'The Investor & The Accumulator',
+          url: window.location.href,
+          isClient: isClient,
+          city: geo.city || 'London',
+          region: geo.region || '',
+          country: geo.country || 'United Kingdom',
+          countryCode: countryCode,
+          flag: (geo.flag && geo.flag.emoji) ? geo.flag.emoji : '🇬🇧',
+          isp: (geo.connection && geo.connection.isp) ? geo.connection.isp : '',
+          device: `${isMobile ? 'Mobile' : 'Desktop'} (${window.innerWidth}x${window.innerHeight})`,
+          referrer: document.referrer || 'Direct / Cold Email Click',
+          ts: new Date().toISOString()
+        };
+
+        await fetch('https://ntfy.sh/mjay143_outreach_tracker_2026', {
+          method: 'POST',
+          headers: {
+            'Title': isClient
+              ? `🔥 CLIENT VISIT: Monevator.com (${payload.city}, ${payload.countryCode})`
+              : `🛠️ Preview: Monevator.com (${payload.countryCode})`,
+            'Priority': isClient ? 'high' : 'default',
+            'Tags': isClient ? 'rotating_light,gb,chart_with_upwards_trend' : 'hammer_and_wrench'
+          },
+          body: JSON.stringify(payload)
+        });
+      } catch (e) {}
+    })();
+  </script>
+</body>
+</html>
